@@ -1,0 +1,2159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Silvy — Marketing agents for RIAs</title>
+<meta name="description" content="Silvy builds and manages AI marketing agents for established RIAs. Two senior operators, twelve agents. The output of a 10-person team at the cost of a mid-level hire.">
+<meta name="theme-color" content="#00C260">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Silvy — Marketing agents for RIAs">
+<meta property="og:description" content="Two senior operators managing twelve marketing agents for established RIAs. AI-native infrastructure, built around your firm.">
+<meta property="og:site_name" content="Silvy">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Silvy — Marketing agents for RIAs">
+<meta name="twitter:description" content="Two senior operators managing twelve marketing agents for established RIAs.">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='50' fill='%2300C260'/><rect y='50' width='100' height='50' fill='%230A0A0A'/><g transform='translate(16.1 85.5) scale(0.1 -0.1)' fill='white'><path d='M392 -13C531 -13 623 71 623 204C623 317 550 386 436 417L291 457C232 473 199 502 200 555C201 602 239 631 293 631C389 631 458 572 519 467H595V710H519L508 635H491C450 688 382 723 290 723C149 723 55 637 55 507C55 388 138 326 234 300L378 261C448 242 479 208 478 158C477 112 442 78 385 78C289 78 198 137 125 264H55V0H130L141 85H158C215 24 294 -13 392 -13Z'/></g></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Geist+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=switzer@300,400,500,600,700,800&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Silvy",
+  "description": "Builds and manages AI marketing agents for established RIAs.",
+  "url": "https://silvy.co/",
+  "areaServed": "United States",
+  "priceRange": "$$$",
+  "serviceType": "AI marketing agents for RIAs"
+}
+</script>
+
+<style>
+@font-face {
+  font-family: 'Stringer';
+  src: url('fonts/TRIAL-Stringer-Regular.otf') format('opentype');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Stringer';
+  src: url('fonts/TRIAL-Stringer-Medium.otf') format('opentype');
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Stringer';
+  src: url('fonts/TRIAL-Stringer-Bold.otf') format('opentype');
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Stringer';
+  src: url('fonts/TRIAL-Stringer-Light.otf') format('opentype');
+  font-weight: 300; font-style: normal; font-display: swap;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  /* Neutrals — true white & black */
+  --paper: #FFFFFF;
+  --paper-2: #F6F6F6;
+  --white: #FFFFFF;
+  --ink: #0A0A0A;
+  --ink-2: #1F1F1F;
+  --ink-3: #4F4F4F;
+  /* Accent — electric green. (`--blue` is a legacy name for the same accent.) */
+  --blue: #00C260;
+  --green: var(--blue);
+  /* Type */
+  --wordmark: 'Stringer', 'Times New Roman', serif;
+  --display: 'Geist', 'Inter', 'Helvetica Neue', system-ui, sans-serif;
+  --body: 'Switzer', 'Geist', 'Inter', 'Helvetica Neue', system-ui, sans-serif;
+  --mono: 'Geist Mono', 'JetBrains Mono', ui-monospace, monospace;
+
+  /* Type scale */
+  --t-xs: 0.78rem;
+  --t-sm: 0.92rem;
+  --t-base: 1rem;
+  --t-md: 1.1rem;
+  --t-lg: clamp(1.4rem, 2vw, 1.8rem);
+  --t-xl: clamp(2rem, 3.5vw, 2.6rem);
+  --t-2xl: clamp(2.6rem, 6vw, 5.6rem);
+
+}
+
+html { font-size: 16px; scroll-behavior: smooth; }
+
+html {
+  background: linear-gradient(165deg, #FAFAFB 0%, #F2F2F4 50%, #EAEAEC 100%);
+}
+
+body {
+  font-family: var(--body);
+  color: var(--ink);
+  background: transparent;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Fixed gradient atmosphere — two large blue blooms that shift on scroll */
+body {
+  --g1-x: 100%; --g1-y: 95%; --g1-i: 0.7;
+  --g2-x: 0%;   --g2-y: 25%; --g2-i: 0.5;
+}
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse 120% 100% at var(--g1-x) var(--g1-y),
+      rgba(0, 194, 96, var(--g1-i)) 0%,
+      rgba(0, 194, 96, calc(var(--g1-i) * 0.35)) 28%,
+      rgba(0, 194, 96, 0) 70%
+    ),
+    radial-gradient(
+      ellipse 110% 90% at var(--g2-x) var(--g2-y),
+      rgba(0, 194, 96, var(--g2-i)) 0%,
+      rgba(0, 194, 96, calc(var(--g2-i) * 0.3)) 30%,
+      rgba(0, 194, 96, 0) 70%
+    );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Fixed grain on top of gradient */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='800'><filter id='nbody' x='0%25' y='0%25' width='100%25' height='100%25'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch' seed='3'/><feColorMatrix type='matrix' values='0 0 0 0 0.04  0 0 0 0 0.04  0 0 0 0 0.04  0 0 0 0.65 0'/></filter><rect width='100%25' height='100%25' filter='url(%23nbody)'/></svg>");
+  background-size: 600px 600px;
+  opacity: 0.22;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body > * { position: relative; z-index: 1; }
+
+::selection { background: var(--blue); color: var(--white); }
+
+a { color: inherit; text-decoration: none; }
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 clamp(1.5rem, 4vw, 3rem);
+}
+
+/* ===== CELL SYSTEM ===== */
+.site-frame {
+  margin: 0 clamp(1rem, 3vw, 2.5rem);
+  border: 1px solid var(--ink);
+  border-bottom: none;
+  overflow: hidden;
+  background: transparent;
+}
+.site-frame > section {
+  padding: 0;
+  background: transparent;
+}
+
+.frame-cells {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  background: transparent;
+}
+
+.cell {
+  background: var(--white);
+  padding: clamp(2rem, 3.5vw, 3.2rem);
+  display: flex;
+  flex-direction: column;
+  grid-column: span 12;
+  min-height: 120px;
+  position: relative;
+  border-right: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+}
+.cell:last-child { border-right: none; }
+.cell.span-full { border-right: none; }
+/* Only the absolute last cell on the page kills its bottom border */
+.site-frame > section:last-child > .frame-cells:last-child > .cell { border-bottom: none; }
+
+/* Spans on the 12-col grid */
+.cell.span-1  { grid-column: span 1; }
+.cell.span-2  { grid-column: span 2; }
+.cell.span-3  { grid-column: span 3; }
+.cell.span-4  { grid-column: span 4; }
+.cell.span-5  { grid-column: span 5; }
+.cell.span-6  { grid-column: span 6; }
+.cell.span-7  { grid-column: span 7; }
+.cell.span-8  { grid-column: span 8; }
+.cell.span-9  { grid-column: span 9; }
+.cell.span-10 { grid-column: span 10; }
+.cell.span-11 { grid-column: span 11; }
+.cell.span-full { grid-column: 1 / -1; }
+
+/* Vertical alignment */
+.cell.v-top    { justify-content: flex-start; }
+.cell.v-center { justify-content: center; }
+.cell.v-bottom { justify-content: flex-end; }
+
+/* Horizontal alignment */
+.cell.h-right  { align-items: flex-end; text-align: right; }
+.cell.h-center { align-items: center; text-align: center; }
+
+/* Backgrounds */
+.cell.bg-paper { background: var(--paper-2); }
+.cell.bg-ink   { background: var(--ink); color: var(--white); }
+.cell.bg-blue  { background: var(--blue); color: var(--white); }
+.cell.bg-green { background: var(--green); color: var(--white); }
+.cell.bg-transparent { background: transparent; }
+.cell.bg-gradient {
+  background:
+    radial-gradient(
+      ellipse 90% 100% at 100% 80%,
+      rgba(0, 194, 96, 0.30) 0%,
+      rgba(0, 194, 96, 0.08) 30%,
+      rgba(0, 194, 96, 0) 65%
+    ),
+    var(--white);
+}
+
+/* Photo treatments — full-bleed page hero with photo bg + photo bg on cells */
+.page-header.has-photo {
+  background-color: var(--ink);
+}
+.page-header.has-photo .cell {
+  --hero-darken: 0;
+  background:
+    linear-gradient(90deg,
+      rgba(0, 0, 0, calc(0.45 + 0.15 * var(--hero-darken))) 0%,
+      rgba(0, 0, 0, calc(0.28 + 0.12 * var(--hero-darken))) 38%,
+      rgba(0, 0, 0, 0) 72%),
+    var(--hero-photo) var(--hero-pos, center) / cover no-repeat;
+  background-color: var(--ink);
+  min-height: 70vh;
+}
+.page-header.has-photo .big,
+.page-header.has-photo .deck { color: var(--white); }
+.page-header.has-photo .deck { color: rgba(255,255,255,0.85); }
+
+.cell.bg-photo {
+  background: var(--cell-photo) var(--cell-photo-pos, center) / cover no-repeat;
+  color: var(--white);
+}
+/* CTA photo cells (links) keep the dark overlay so white text reads. */
+a.cell.bg-photo,
+.cell.bg-photo.darken {
+  background:
+    linear-gradient(180deg, rgba(10,10,10,0.30) 0%, rgba(10,10,10,0.62) 100%),
+    var(--cell-photo) var(--cell-photo-pos, center) / cover no-repeat;
+}
+/* Hover state on photo CTA cells — darken imagery, brighten text */
+a.cell.bg-photo {
+  overflow: hidden;
+  transition: background-color 0.35s ease;
+}
+a.cell.bg-photo > * { position: relative; z-index: 1; }
+a.cell.bg-photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.35s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+a.cell.bg-photo:hover::after { background: rgba(0, 0, 0, 0.30); }
+a.cell.bg-photo:hover > p { color: rgba(255, 255, 255, 1); }
+a.cell.bg-photo:hover .cell-cta {
+  color: var(--white);
+  border-bottom-color: rgba(255, 255, 255, 0.85);
+}
+
+.cell.bg-photo p,
+.cell.bg-photo .cell-cta,
+.cell.bg-photo .big,
+.cell.bg-photo .deck { color: var(--white); }
+.cell.bg-photo > p { color: rgba(255,255,255,0.88); }
+
+/* When two saturated cells sit side-by-side, divider needs to contrast */
+.cell.bg-ink:has(+ .cell.bg-ink) { border-right-color: rgba(255,255,255,0.22); }
+.cell.bg-blue:has(+ .cell.bg-blue) { border-right-color: rgba(255,255,255,0.22); }
+.cell.bg-green:has(+ .cell.bg-green) { border-right-color: rgba(255,255,255,0.22); }
+
+/* Inherit text color for blue/green-bg cells */
+.cell.bg-blue .big,    .cell.bg-green .big,
+.cell.bg-blue .deck,   .cell.bg-green .deck,
+.cell.bg-blue > p,     .cell.bg-green > p,
+/* Green cells: all text is white, period. */
+.cell.bg-blue, .cell.bg-blue *,
+.cell.bg-green, .cell.bg-green *,
+.cell.free-cell, .cell.free-cell * { color: var(--white); }
+
+.cell.bg-blue .value {
+  font-size: var(--t-2xl);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+/* Sizing */
+.cell.tall   { min-height: 50vh; }
+.cell.taller { min-height: 65vh; }
+
+/* Airy — extra breathing room for headline cells */
+.cell.airy {
+  padding: clamp(4rem, 7vw, 6.5rem) clamp(2.5rem, 4vw, 4rem);
+}
+
+/* When a centered headline is in a cell, keep it readable */
+.cell.h-center .big { max-width: 22ch; margin-left: auto; margin-right: auto; }
+.cell.h-center .deck { margin-left: auto; margin-right: auto; }
+
+/* Clickable cell — replaces button look */
+a.cell, .cell.clickable {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.2s, transform 0.2s;
+}
+a.cell.bg-ink:hover, .cell.clickable.bg-ink:hover {
+  background: #2A2A2A;
+}
+a.cell.bg-ink::after, .cell.clickable.bg-ink::after {
+  content: '→';
+  position: absolute;
+  top: clamp(1.5rem, 2.5vw, 2rem);
+  right: clamp(1.5rem, 2.5vw, 2rem);
+  font-family: var(--display);
+  font-size: var(--t-lg);
+  color: var(--white);
+  transition: transform 0.2s;
+}
+a.cell.bg-ink:hover::after { transform: translateX(4px); }
+
+/* Inside-cell typography */
+.cell .big {
+  font-family: var(--body);
+  font-weight: 500;
+  font-size: var(--t-2xl);
+  line-height: 1;
+  letter-spacing: -0.035em;
+  color: var(--ink);
+  max-width: 18ch;
+  text-wrap: balance;
+}
+.cell h1.big {
+  letter-spacing: -0.05em;
+  line-height: 0.95;
+  max-width: 14ch;
+}
+.cell.bg-ink .big { color: var(--white); }
+.cell .big em { font-style: normal; color: inherit; }
+
+.cell .deck {
+  font-family: var(--body);
+  font-weight: 400;
+  font-size: var(--t-md);
+  line-height: 1.55;
+  color: var(--ink-2);
+  max-width: 48ch;
+  margin-top: 1.3rem;
+  text-wrap: pretty;
+}
+.cell.bg-ink .deck { color: rgba(255,255,255,0.78); }
+
+.cell > p {
+  font-family: var(--body);
+  font-size: var(--t-base);
+  line-height: 1.6;
+  color: var(--ink-2);
+  max-width: 56ch;
+  text-wrap: pretty;
+}
+.cell > p + p { margin-top: 0.9rem; }
+.cell.bg-ink > p { color: rgba(255,255,255,0.82); }
+
+.cell-cta {
+  display: inline-block;
+  font-family: var(--body);
+  font-weight: 500;
+  font-size: var(--t-base);
+  color: var(--white);
+  margin-top: 1.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.4);
+  padding-bottom: 0.15rem;
+  transition: border-color 0.2s;
+}
+a.cell:hover .cell-cta { border-color: var(--white); }
+
+.cell .label {
+  font-family: var(--body);
+  font-weight: 500;
+  font-size: var(--t-sm);
+  color: var(--ink-3);
+  margin-bottom: 0.6rem;
+}
+.cell.bg-ink .label { color: rgba(255,255,255,0.6); }
+
+.cell .value {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: var(--t-xl);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: var(--ink);
+}
+.cell.bg-ink .value { color: var(--white); }
+.cell .value .unit {
+  font-weight: 400;
+  font-size: 0.55em;
+  color: var(--ink-3);
+  margin-left: 0.2rem;
+}
+.cell.bg-ink .value .unit { color: rgba(255,255,255,0.55); }
+
+/* Agent name (used in agent inventory cells) */
+.cell .agent-name {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: var(--t-md);
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  margin-bottom: 0.7rem;
+  line-height: 1.15;
+}
+
+/* Phase name (left column of phase rows) */
+.cell .phase-name {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: var(--t-lg);
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  line-height: 1.05;
+}
+
+/* Phase title (middle column h3) */
+.cell .phase-title {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: var(--t-lg);
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+  color: var(--ink);
+  margin-bottom: 1rem;
+}
+
+/* Phase price (right column) */
+.cell .phase-price {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: var(--t-lg);
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  line-height: 1.05;
+}
+.cell .phase-price span {
+  display: block;
+  font-family: var(--body);
+  font-weight: 400;
+  font-size: var(--t-sm);
+  color: var(--ink-3);
+  margin-top: 0.5rem;
+  letter-spacing: 0;
+}
+/* Free cell — blue background + white text on desktop, blue text on white on mobile */
+.cell.free-cell {
+  background: var(--blue);
+}
+.cell.free-cell .phase-price,
+.cell.free-cell .phase-price span { color: var(--white); }
+.cell.free-cell .phase-price span { color: rgba(255,255,255,0.75); }
+
+/* Big label — used for Today / With Silvy on dark cells */
+.cell .big-label {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: var(--t-lg);
+  letter-spacing: -0.02em;
+  color: inherit;
+  line-height: 1;
+}
+
+/* Founder photo — full-bleed cell with both bios overlaid in white */
+.founder-photo-overlay {
+  padding: 0 !important;
+  position: relative;
+  display: block;
+  height: clamp(340px, 40vw, 520px);
+  background: var(--founder-photo) center 12% / cover no-repeat;
+}
+/* Scrim so white bio text stays legible over a busy photo */
+.founder-photo-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.74) 0%,
+    rgba(0,0,0,0.34) 30%,
+    rgba(0,0,0,0) 58%
+  );
+}
+.founder-overlay {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  width: 42%;
+  max-width: 30rem;
+  padding: clamp(2rem, 3.5vw, 3.2rem);
+  color: var(--white);
+}
+.founder-overlay-left  { left: 0;  text-align: left; }
+.founder-overlay-right { right: 0; text-align: right; }
+
+.founder-overlay .founder-name {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: var(--t-lg);
+  letter-spacing: -0.025em;
+  color: var(--white);
+  line-height: 1.05;
+  margin-bottom: 0.25rem;
+}
+.founder-overlay .founder-title {
+  font-family: var(--body);
+  font-weight: 500;
+  font-size: var(--t-sm);
+  color: rgba(255,255,255,0.72);
+  margin-bottom: 0.9rem;
+}
+.founder-overlay p {
+  font-family: var(--body);
+  font-size: var(--t-base);
+  line-height: 1.5;
+  color: rgba(255,255,255,0.94);
+  text-shadow: 0 1px 14px rgba(0,0,0,0.55);
+}
+
+/* Mobile: stack the bios — Ben at the top of the photo, Will at the bottom —
+   each full-width, with a scrim at both ends */
+@media (max-width: 800px) {
+  .founder-photo-overlay {
+    height: auto;
+    aspect-ratio: 3 / 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .founder-photo-overlay::before {
+    background: linear-gradient(
+      to top,
+      rgba(0,0,0,0.84) 0%, rgba(0,0,0,0.45) 30%, rgba(0,0,0,0) 56%
+    );
+  }
+  /* Stack both bios at the bottom so the faces stay clear */
+  .founder-overlay {
+    position: static;
+    width: 100%;
+    max-width: none;
+    text-align: left;
+  }
+  .founder-overlay-left  { padding-bottom: 0.4rem; }
+  .founder-overlay-right { padding-top: 0.4rem; }
+}
+
+/* Fit cells — great fit / not a fit */
+.fit-cell .fit-head {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: var(--t-md);
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: 1.4rem;
+}
+.fit-cell.fit-not .fit-head { color: var(--ink-3); }
+.fit-cell ul { list-style: none; padding: 0; margin: 0; }
+.fit-cell li {
+  font-family: var(--body);
+  font-size: var(--t-sm);
+  line-height: 1.5;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--ink);
+  color: var(--ink);
+}
+.fit-cell li:last-child { border-bottom: none; }
+.fit-cell.fit-not li { color: var(--ink-3); }
+
+/* FAQ intro — centered headline as a section break */
+.faq-intro {
+  min-height: 45vh;
+  padding: clamp(4rem, 8vw, 7rem) clamp(2rem, 5vw, 4rem);
+}
+.faq-intro .big { max-width: 18ch; }
+
+/* FAQ cell — accordion list inside */
+.faq-cell { padding: 0 !important; }
+.faq-cell .faq-item {
+  border-bottom: 1px solid var(--ink);
+  padding: 0 clamp(2rem, 3.5vw, 3.2rem);
+}
+.faq-cell .faq-item:last-child { border-bottom: none; }
+
+/* ===== MOBILE OVERRIDES ===== */
+@media (max-width: 800px) {
+  /* All spans collapse to full width by default */
+  .cell.span-1, .cell.span-2, .cell.span-3, .cell.span-4, .cell.span-5,
+  .cell.span-6, .cell.span-7, .cell.span-8, .cell.span-9, .cell.span-10, .cell.span-11
+    { grid-column: 1 / -1; }
+
+  /* Inline-grid-placed cells (e.g., Promise multi-row block) collapse to stack */
+  .promise .frame-cells { grid-template-rows: auto !important; }
+  .promise .cell[style*="grid-column"] {
+    grid-column: 1 / -1 !important;
+    grid-row: auto !important;
+  }
+
+  /* Decorative photo cells (no text content) — hide on mobile to save vertical space */
+  .cell.bg-photo:empty { display: none; }
+
+  /* Cell defaults with more breathing room on mobile */
+  .cell { min-height: 0; padding: 2.4rem 1.5rem; border-right: none; }
+  .cell.airy { padding: 4rem 1.5rem; }
+  .cell.tall, .cell.taller { min-height: 0; }
+
+  /* Intro headline reads as a hero on mobile — bigger type, filling the box */
+  .intro .cell.bg-transparent { min-height: 44vh; }
+  .intro .cell .big { font-size: clamp(3.2rem, 11vw, 4.4rem); }
+
+  /* Headline cells always left-align on mobile (right/center is for wide screens) */
+  .cell.h-right, .cell.h-center { align-items: flex-start; text-align: left; }
+  .cell.h-right .big, .cell.h-center .big { text-align: left; max-width: none; margin: 0; }
+  .cell.h-center .deck { margin-left: 0; margin-right: 0; }
+  .cell.v-bottom, .cell.v-center { justify-content: flex-start; }
+
+  /* Headlines + body scale down */
+  .cell .big { font-size: var(--t-xl); max-width: none; }
+  .cell .deck { font-size: var(--t-base); max-width: none; margin-top: 1rem; }
+  .cell > p { font-size: var(--t-sm); }
+
+  /* PHASES — collapse each phase's 3 cells into one block (no internal lines) */
+  .phases > .frame-cells:not(:first-child) > .cell:first-child {
+    border-bottom: none;
+    padding-bottom: 0.4rem;
+  }
+  .phases > .frame-cells:not(:first-child) > .cell:nth-child(2) {
+    border-bottom: none;
+    padding-top: 0.2rem;
+    padding-bottom: 1.4rem;
+  }
+  .phases > .frame-cells:not(:first-child) > .cell:last-child {
+    padding-top: 1.4rem;
+    padding-bottom: 1.4rem;
+  }
+  /* …but the sum row at the very end keeps its bottom border as the section divider. */
+  .phases > .frame-cells:last-child > .cell:last-child {
+    border-bottom: 1px solid var(--ink);
+  }
+  .cell .phase-name {
+    font-size: var(--t-md);
+    margin-bottom: 0;
+    color: var(--ink-3);
+    font-weight: 500;
+  }
+  .cell .phase-title {
+    font-size: var(--t-lg);
+    margin-bottom: 0.8rem;
+    margin-top: 0;
+  }
+  .cell .phase-price { font-size: var(--t-lg); }
+  .cell .phase-price span { font-size: var(--t-sm); margin-top: 0.3rem; }
+/* Today / With Silvy header */
+  .outcomes > .frame-cells:not(:first-child) > .cell:first-child {
+    border-bottom: none;
+    padding-bottom: 0.3rem;
+  }
+  .outcomes > .frame-cells:not(:first-child) > .cell:last-child {
+    padding-top: 0.3rem;
+  }
+  .outcomes .from-line { font-size: var(--t-sm); }
+  .outcomes .to-line { font-size: var(--t-base); }
+
+  /* COMPARE table — freeze the leftmost column on mobile */
+  .compare-wrap { overflow-x: auto; }
+  .compare-wrap table {
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+  .compare-wrap thead th:first-child,
+  .compare-wrap tbody th {
+    position: sticky;
+    left: 0;
+    z-index: 3;
+    background: var(--paper-2);
+    min-width: 9rem;
+    max-width: 9rem;
+    border-right: none;
+  }
+  .compare-wrap tbody th {
+    box-shadow: inset -1px 0 0 var(--ink);
+  }
+  /* Header row: paint bottom border via inset shadow too (avoids the th
+     border-bottom dropping out under border-collapse: separate + sticky). */
+  .compare-wrap thead th {
+    border-bottom: none;
+    box-shadow: inset 0 -1px 0 var(--ink);
+  }
+  .compare-wrap thead th:first-child {
+    box-shadow: inset -1px -1px 0 var(--ink);
+  }
+  .compare-wrap td { min-width: 9rem; }
+
+  /* AGENT INVENTORY — 2-col grid (6 rows × 2 cols) with tighter padding */
+  .inventory .cell.span-3 {
+    grid-column: span 6;
+    padding: 1.3rem 1rem;
+    min-height: 130px;
+    border-right: 1px solid var(--ink);
+  }
+  .inventory > .frame-cells > .cell.span-3:nth-child(2n) { border-right: none; }
+
+  /* PRICING — 2x2 grid */
+  .pricing-narrative > .frame-cells:nth-child(2) > .cell { grid-column: span 6; }
+  .pricing-narrative > .frame-cells:nth-child(2) > .cell { border-right: 1px solid var(--ink); }
+  .pricing-narrative > .frame-cells:nth-child(2) > .cell:nth-child(2n) { border-right: none; }
+
+  /* RISK — generous breathing room (it's a moment section) */
+  /* FIT — stacked with room */
+  .fit .cell { padding: 2.6rem 1.5rem; }
+
+  /* FAQ — smaller padding inside accordion items */
+  .faq-cell .faq-item { padding: 0 1.2rem; }
+  .faq-item summary { padding: 1.3rem 0; font-size: var(--t-md); }/* CTA — breathing room + bottom-aligned on mobile */
+  .cta .cell { min-height: 35vh; padding: 4.5rem 1.5rem 2rem; justify-content: flex-end; }
+  .cta .cell.bg-ink { min-height: 35vh; padding: 4rem 1.5rem 2rem; justify-content: flex-end; }
+}
+
+@media (max-width: 500px) {
+  /* Agents stay 2-col on phones — 6 rows × 2 cols */
+  .pricing-narrative > .frame-cells:nth-child(2) > .cell { grid-column: 1 / -1; border-right: none; }
+}
+
+/* ===== WORDMARK COMPONENT ===== */
+.wordmark {
+  font-family: var(--wordmark);
+  font-weight: 400;
+  letter-spacing: -0.06em;
+  line-height: 1.33;
+  display: inline-block;
+}
+
+/* ===== NAV ===== */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  margin: 0 clamp(1rem, 3vw, 2.5rem);
+  border: 1px solid var(--ink);
+  border-top: none;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transform: translateY(-100%);
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+nav.visible { transform: translateY(0); }
+
+.nav-row {
+  display: grid;
+  grid-template-columns: auto 1fr repeat(4, auto) auto;
+  align-items: stretch;
+}
+
+.nav-cell {
+  padding: 0.85rem 1.4rem;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--ink);
+  background: transparent;
+  transition: background 0.2s, color 0.2s;
+}
+.nav-cell + .nav-cell { border-left: 1px solid var(--ink); }
+.nav-cell:hover { background: var(--blue); color: var(--white); }
+.nav-cell-active { background: var(--blue); color: var(--white); }
+.nav-cell-spacer { padding: 0; }
+.nav-cell-spacer:hover { background: transparent; }
+
+.nav-cell-logo .nav-logo {
+  font-family: var(--wordmark);
+  font-weight: 400;
+  font-size: var(--t-xl);
+  letter-spacing: -0.06em;
+  color: inherit;
+  line-height: 1;
+  transition: color 0.2s;
+}
+
+.nav-link {
+  font-family: var(--body);
+  font-weight: 500;
+  font-size: var(--t-sm);
+  padding: 0.85rem 1.3rem;
+}
+
+.nav-cell-cta {
+  font-family: var(--body);
+  font-weight: 500;
+  font-size: var(--t-sm);
+  color: var(--white);
+  background: var(--ink);
+  padding: 0.85rem 1.8rem;
+}
+.nav-cell-cta:hover { background: var(--blue); color: var(--white); }
+
+@media (max-width: 768px) {
+  .nav-link { display: none; }
+  .nav-cell-spacer { display: none; }
+  .nav-row { grid-template-columns: 1fr auto; }
+}
+
+/* ===== HERO ===== */
+.hero {
+  background: transparent;
+  color: var(--ink);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem 0 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero .container { position: relative; z-index: 2; }
+
+.hero::after {
+  content: 'Scroll ↓';
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--body);
+  font-weight: 500;
+  font-size: var(--t-sm);
+  color: var(--ink-3);
+  opacity: 0;
+  animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.9s forwards;
+  z-index: 3;
+}
+
+.hero-inner {
+  transition: none;
+  will-change: transform, opacity;
+}
+
+.hero-wordmark {
+  font-family: var(--wordmark);
+  font-weight: 400;
+  font-size: clamp(5rem, min(28vw, 58vh), 24rem);
+  line-height: 1;
+  letter-spacing: -0.06em;
+  color: var(--ink);
+  display: block;
+  white-space: nowrap;
+  padding-bottom: 0.12em;
+}
+
+.hero-wordmark .l {
+  display: inline-block;
+  --offset: 0em;
+  transform: translateX(var(--offset));
+  opacity: 0;
+  animation: letter-in 1.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  will-change: transform, opacity;
+}
+
+/* S is locked in place — appears immediately, no slide */
+.hero-wordmark .l-0 { --offset: 0em; animation-delay: 0s; animation-duration: 0.6s; }
+.hero-wordmark .l-1 { --offset: 0.55em; animation-delay: 0.15s; }
+.hero-wordmark .l-2 { --offset: 1.1em;  animation-delay: 0.22s; }
+.hero-wordmark .l-3 { --offset: 1.65em; animation-delay: 0.30s; }
+.hero-wordmark .l-4 { --offset: 2.2em;  animation-delay: 0.38s; }
+
+@keyframes letter-in {
+  0%   { transform: translateX(var(--offset)); opacity: 0; }
+  20%  { opacity: 1; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+.hero-tagrow {
+  padding-top: 1.4rem;
+  margin-top: 1.2rem;
+  position: relative;
+  text-align: center;
+}
+.hero-tagrow .tag-clip {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+}
+
+.hero-tagrow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100vw;
+  height: 1px;
+  background: var(--ink);
+  opacity: 0.6;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  animation: line-grow 0.7s cubic-bezier(0.22, 1, 0.36, 1) 1.9s forwards;
+}
+
+@keyframes line-grow {
+  to { transform: translateX(-50%) scaleX(1); }
+}
+
+.hero-tagrow .tag {
+  display: inline-block;
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(1.2rem, min(2.4vw, 4.2vh), 2.4rem);
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  line-height: 1.05;
+  transform: translateY(110%);
+  opacity: 0;
+  animation: tag-rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) 2s forwards;
+  will-change: transform, opacity;
+}
+
+@keyframes tag-rise {
+  0%   { transform: translateY(110%); opacity: 0; }
+  40%  { opacity: 1; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-family: var(--body);
+  font-weight: 500;
+  font-size: var(--t-base);
+  color: var(--white);
+  background: var(--ink);
+  padding: 1.05rem 1.9rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  border-radius: 999px;
+}
+.btn-primary:hover {
+  background: #2A2A2A;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 30px -10px rgba(0,0,0,0.35);
+}
+.btn-primary::after { content: '→'; transition: transform 0.2s; font-size: var(--t-md); line-height: 1; }
+.btn-primary:hover::after { transform: translateX(3px); }
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-family: var(--body);
+  font-weight: 500;
+  font-size: var(--t-base);
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--ink);
+  padding: 1.05rem 1.9rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  border-radius: 999px;
+}
+.btn-ghost:hover { background: var(--ink); color: var(--white); }
+
+@media (max-width: 900px) {
+  .hero { min-height: auto; padding: 8rem 0 5rem; }
+  .hero-wordmark { font-size: clamp(5rem, 38vw, 12rem); }
+  .hero-tagrow { flex-direction: column; align-items: flex-start; gap: 0.4rem; }
+  .hero-tagrow .tag-end { text-align: left; }
+}
+
+/* ===== INTRO (inside site-frame) ===== */
+.intro { background: var(--white); }
+
+.intro .intro-headline {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.intro h1 {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: var(--t-2xl);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+  color: var(--ink);
+  text-align: right;
+  max-width: 14ch;
+}
+.intro h1 em { font-style: normal; color: var(--ink); }
+
+.intro .intro-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.intro p.lead {
+  font-family: var(--body);
+  font-size: var(--t-md);
+  color: var(--ink-2);
+  line-height: 1.65;
+  max-width: 42ch;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 800px) {
+  .intro .intro-headline { justify-content: flex-start; }
+  .intro h1 { text-align: left; }
+  .intro .intro-body { justify-content: flex-start; }
+}
+
+/* ===== FAQ ===== */
+.faq { padding: clamp(5rem, 10vw, 8rem) 0; }
+
+.faq-list {
+  margin-top: 2rem;
+  border-top: 1px solid var(--ink);
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--ink);
+}
+
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 1.6rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 2rem;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: var(--t-md);
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  transition: color 0.2s;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item[open] summary { color: var(--ink); }
+
+.faq-item summary::after {
+  content: '+';
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: var(--t-lg);
+  color: var(--ink);
+  transition: transform 0.2s;
+  line-height: 1;
+}
+.faq-item[open] summary::after { transform: rotate(45deg); }
+
+.faq-answer {
+  padding: 0 0 1.8rem;
+  font-family: var(--body);
+  font-size: var(--t-base);
+  line-height: 1.7;
+  color: var(--ink-2);
+  max-width: 70ch;
+}
+.faq-answer p + p { margin-top: 0.8rem; }
+
+/* ===== COMPARE ===== */
+.compare {
+  padding: clamp(5rem, 10vw, 8rem) 0;
+  background: var(--paper);
+}
+
+.compare-wrap {
+  padding: 0 !important;
+  overflow-x: auto;
+}
+
+.compare-wrap table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--body);
+  min-width: 720px;
+}
+
+.compare-wrap th,
+.compare-wrap td {
+  padding: 1.1rem 1.3rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--ink);
+  border-right: 1px solid var(--ink);
+  font-size: var(--t-sm);
+  line-height: 1.5;
+}
+
+.compare-wrap th:last-child,
+.compare-wrap td:last-child { border-right: none; }
+.compare-wrap tbody tr:last-child > * { border-bottom: none; }
+
+.compare-wrap thead th {
+  font-family: var(--body);
+  font-weight: 500;
+  font-size: var(--t-sm);
+  color: var(--ink-3);
+  background: var(--paper-2);
+  border-bottom: 1px solid var(--ink);
+  vertical-align: middle;
+}
+
+.compare-wrap thead th.silvy {
+  background: var(--blue);
+  color: var(--white);
+}
+
+.compare-wrap tbody th {
+  font-family: var(--body);
+  font-weight: 500;
+  font-size: var(--t-sm);
+  color: var(--ink-2);
+  width: 22%;
+  background: var(--paper-2);
+}
+
+.compare-wrap td.silvy {
+  background: rgba(0,0,0,0.035);
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.compare-wrap td.muted { color: var(--ink-3); }
+
+/* ===== STAT BAND ===== */
+.stat-band {
+  background: var(--blue);
+  color: var(--white);
+  padding: clamp(3rem, 5vw, 4rem) 0 clamp(5rem, 9vw, 7rem);
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+.stat-band .container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .stat-band .container { grid-template-columns: 1fr; }
+}
+
+/* ===== SECTION HEAD ===== */
+section { position: relative; }
+
+.section-head {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: end;
+  margin-bottom: clamp(3rem, 5vw, 4.5rem);
+}
+
+/* Right-aligned variant */
+.section-head.align-right { grid-template-columns: 1fr 1.4fr; }
+.section-head.align-right > h2 {
+  grid-column: 2;
+  text-align: right;
+  margin-left: auto;
+}
+.section-head.align-right > .body-lead { grid-column: 1; grid-row: 1; }
+
+/* Stacked variant — H2 above, body below */
+.section-head.stacked { grid-template-columns: 1fr; gap: 1.5rem; }
+.section-head.stacked > h2 { max-width: 22ch; }
+
+.section-head h2 {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: var(--t-2xl);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+  max-width: 15ch;
+}
+.section-head h2 em {
+  font-style: normal;
+  color: var(--ink);
+}
+
+.section-head .body-lead {
+  font-family: var(--body);
+  font-weight: 400;
+  font-size: var(--t-md);
+  line-height: 1.55;
+  color: var(--ink-2);
+  max-width: 48ch;
+}
+
+.section-head .body-lead p + p { margin-top: 1rem; }
+
+@media (max-width: 900px) {
+  .section-head { grid-template-columns: 1fr; gap: 1.5rem; }
+}
+
+/* ===== PHASES ===== */
+.phases{
+  background: var(--paper);
+}
+
+.phase-list {
+  display: grid;
+  gap: 0;
+  border-top: 1px solid var(--ink);
+  margin-top: 2rem;
+}
+
+.phase-list {
+  margin: 2rem calc(-1 * clamp(3rem, 6vw, 5rem)) calc(-1 * clamp(4rem, 8vw, 7rem));
+  border-top: 1px solid var(--ink);
+}
+.phase {
+  display: grid;
+  grid-template-columns: minmax(140px, 1fr) 3fr minmax(140px, 1fr);
+  gap: 0;
+  padding: 0;
+  border-bottom: 1px solid var(--ink);
+}
+.phase:last-child { border-bottom: none; }
+
+.phase > * {
+  padding: clamp(2rem, 3.5vw, 3rem) clamp(1.5rem, 3vw, 2.5rem);
+}
+.phase > * + * { border-left: 1px solid var(--ink); }
+
+.phase-num {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: var(--t-md);
+  letter-spacing: -0.02em;
+  color: var(--ink-3);
+}
+
+.phase-main h3 {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: var(--t-xl);
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+  color: var(--ink);
+  margin-bottom: 1.2rem;
+}
+
+.phase-main p {
+  font-family: var(--body);
+  font-size: var(--t-base);
+  line-height: 1.65;
+  color: var(--ink-2);
+  max-width: 60ch;
+}
+
+.phase-price {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: var(--t-md);
+  color: var(--ink);
+  text-align: right;
+}
+.phase-price span {
+  display: block;
+  font-weight: 400;
+  font-size: var(--t-sm);
+  color: var(--ink-3);
+  margin-top: 0.3rem;
+  letter-spacing: 0;
+}
+
+@media (max-width: 800px) {
+  .phase { grid-template-columns: 1fr; }
+  .phase > * + * { border-left: none; border-top: 1px solid var(--ink); }
+  .phase-price { text-align: left; }
+}
+
+/* ===== PHASE OUTCOMES ===== */
+.phase-outcomes {
+  list-style: none;
+  margin-top: 1.2rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--ink);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.4rem;
+}
+.phase-outcomes li {
+  font-family: var(--mono);
+  font-weight: 400;
+  font-size: var(--t-xs);
+  letter-spacing: 0.02em;
+  color: var(--ink-2);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.phase-outcomes li::before {
+  content: '→';
+  color: var(--ink);
+  font-family: var(--display);
+  font-size: var(--t-sm);
+  line-height: 1;
+}
+
+/* ===== FOUNDERS ===== */
+.founders{
+  padding: clamp(5rem, 10vw, 8rem) 0;
+  background: var(--paper-2);
+}
+
+.founders-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  margin: 2rem calc(-1 * clamp(3rem, 6vw, 5rem)) calc(-1 * clamp(4rem, 8vw, 7rem));
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+}
+
+.founder {
+  background: var(--white);
+  padding: clamp(2.4rem, 3vw, 3rem);
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 1.8rem;
+  align-items: start;
+}
+.founder + .founder { border-left: 1px solid var(--ink); }
+
+.founder-photo {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: var(--ink);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--wordmark);
+  font-weight: 400;
+  font-size: var(--t-xl);
+  letter-spacing: -0.06em;
+  color: var(--white);
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.founder-meta h3 {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: var(--t-lg);
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  margin-bottom: 0.45rem;
+  line-height: 1.05;
+}
+
+.founder-title {
+  font-family: var(--body);
+  font-weight: 500;
+  font-size: var(--t-sm);
+  color: var(--ink-3);
+  margin-bottom: 1.2rem;
+}
+
+.founder p {
+  font-family: var(--body);
+  font-size: var(--t-sm);
+  line-height: 1.6;
+  color: var(--ink-2);
+}
+
+@media (max-width: 800px) {
+  .founders-grid { grid-template-columns: 1fr; }
+  .founder { grid-template-columns: 80px 1fr; gap: 1.2rem; padding: 1.8rem; }
+  .founder-photo { width: 80px; height: 80px; font-size: var(--t-lg); }
+}
+
+/* ===== PRICING NARRATIVE ===== */
+.pricing-narrative{
+}
+
+.price-stack {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  margin: 1rem calc(-1 * clamp(3rem, 6vw, 5rem)) 0;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+}
+
+.price-cell {
+  padding: 2.2rem 1.6rem 2rem;
+  border-right: 1px solid var(--ink);
+  position: relative;
+}
+.price-cell:last-child { border-right: none; }
+.price-cell.total { background: var(--ink); color: var(--white); }
+
+.price-cell .label {
+  font-family: var(--body);
+  font-weight: 500;
+  font-size: var(--t-sm);
+  color: var(--ink-3);
+  margin-bottom: 1.1rem;
+}
+.price-cell.total .label { color: rgba(255,255,255,0.65); }
+
+.price-cell .value {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: var(--t-xl);
+  letter-spacing: -0.04em;
+  color: var(--ink);
+  line-height: 1;
+}
+.price-cell.total .value { color: var(--white); }
+
+.price-cell .value .unit {
+  font-family: var(--mono);
+  font-weight: 400;
+  font-size: var(--t-xs);
+  color: var(--ink-3);
+  letter-spacing: 0;
+  margin-left: 0.2rem;
+}
+.price-cell.total .value .unit { color: rgba(255,255,255,0.55); }
+
+.price-detail {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+}
+
+.price-detail p {
+  font-family: var(--body);
+  font-size: var(--t-base);
+  line-height: 1.7;
+  color: var(--ink-2);
+}
+.price-detail p + p { margin-top: 1rem; }
+
+@media (max-width: 800px) {
+  .price-stack { grid-template-columns: repeat(2, 1fr); }
+  .price-cell:nth-child(2) { border-right: none; }
+  .price-cell:nth-child(1), .price-cell:nth-child(2) { border-bottom: 1px solid var(--ink); }
+  .price-detail { grid-template-columns: 1fr; }
+}
+
+/* ===== FIT TABLE ===== */
+.fit{
+  background: var(--paper);
+}
+
+.fit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  margin: 2rem calc(-1 * clamp(3rem, 6vw, 5rem)) calc(-1 * clamp(4rem, 8vw, 7rem));
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  background: var(--white);
+}
+
+.fit-col {
+  padding: 0;
+}
+
+.fit-col .col-head {
+  padding: 1.2rem 1.8rem;
+  font-family: var(--mono);
+  font-weight: 400;
+  font-size: var(--t-xs);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--ink);
+  background: var(--paper-2);
+}
+
+.fit-col:first-child { border-right: 1px solid var(--ink); }
+.fit-col:first-child .col-head { color: var(--ink); }
+.fit-col:last-child .col-head { color: var(--ink-3); }
+
+.fit-col ul { list-style: none; }
+
+.fit-col li {
+  font-family: var(--body);
+  font-size: var(--t-sm);
+  line-height: 1.55;
+  padding: 1.1rem 1.8rem 1.1rem 3rem;
+  border-bottom: 1px solid var(--ink);
+  position: relative;
+  color: var(--ink);
+}
+.fit-col li:last-child { border-bottom: none; }
+
+.fit-col:last-child li { color: var(--ink-3); }
+
+.fit-col:first-child li::before {
+  content: '+';
+  position: absolute;
+  left: 1.6rem;
+  top: 1.05rem;
+  color: var(--ink);
+  font-weight: 700;
+  font-size: var(--t-base);
+}
+.fit-col:last-child li::before {
+  content: '—';
+  position: absolute;
+  left: 1.6rem;
+  top: 1.05rem;
+  color: var(--ink-3);
+  font-size: var(--t-sm);
+}
+
+@media (max-width: 800px) {
+  .fit-grid { grid-template-columns: 1fr; }
+  .fit-col:first-child { border-right: none; border-bottom: 1px solid var(--ink); }
+}
+
+/* ===== CTA ===== */
+.cta { padding: 0; background: var(--white); }
+
+.cta-cells { min-height: 70vh; }
+.cta-cells .cell { background: var(--white); }
+
+.cta-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+.cta-body p {
+  font-family: var(--body);
+  font-size: var(--t-md);
+  color: var(--ink-2);
+  line-height: 1.65;
+  max-width: 38ch;
+  margin-bottom: 2rem;
+}
+
+.cta-headline {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.cta-headline h2 {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: var(--t-2xl);
+  line-height: 0.95;
+  letter-spacing: -0.045em;
+  color: var(--ink);
+  text-align: right;
+  max-width: 12ch;
+}
+.cta-headline h2 em { font-style: normal; color: var(--ink); }
+
+@media (max-width: 800px) {
+  .cta-headline { justify-content: flex-start; }
+  .cta-headline h2 { text-align: left; }
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: var(--ink);
+  color: rgba(255,255,255,0.65);
+  padding: 4rem 0 3rem;
+  margin: 0 clamp(1rem, 3vw, 2.5rem);
+  border: 1px solid var(--ink);
+}
+footer .container { padding: 0 clamp(3rem, 6vw, 5rem); }
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+.footer-brand .wordmark-sm {
+  font-family: var(--wordmark);
+  font-weight: 400;
+  font-size: var(--t-2xl);
+  letter-spacing: -0.06em;
+  line-height: 1;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.footer-brand p {
+  font-family: var(--body);
+  font-size: var(--t-sm);
+  color: rgba(255,255,255,0.6);
+  max-width: 32ch;
+  line-height: 1.55;
+}
+
+.footer-col h4 {
+  font-family: var(--body);
+  font-weight: 500;
+  font-size: var(--t-sm);
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 1rem;
+}
+
+.footer-col a {
+  display: block;
+  font-family: var(--body);
+  font-size: var(--t-sm);
+  color: rgba(255,255,255,0.8);
+  padding: 0.3rem 0;
+  transition: color 0.2s;
+}
+.footer-col a:hover { color: var(--white); }
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--body);
+  font-size: var(--t-xs);
+  color: rgba(255,255,255,0.45);
+}
+
+@media (max-width: 700px) {
+  .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+  .footer-bottom { flex-direction: column; gap: 1rem; align-items: flex-start; }
+}
+
+/* ===== REVEAL ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 768px) {
+  .reveal { opacity: 1 !important; transform: none !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-row">
+    <a href="#intro" class="nav-cell nav-cell-logo"><span class="nav-logo">Silvy</span></a>
+    <div class="nav-cell nav-cell-spacer"></div>
+        <a href="consult.html" class="nav-cell nav-cell-cta">Book a consultation</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <span class="hero-wordmark" aria-label="Silvy"><span class="l l-0">S</span><span class="l l-1">i</span><span class="l l-2">l</span><span class="l l-3">v</span><span class="l l-4">y</span></span>
+      <div class="hero-tagrow">
+        <span class="tag-clip"><span class="tag">We build and manage marketing agents for RIAs.</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="site-frame">
+
+<!-- INTRO -->
+<section class="intro" id="intro">
+  <div class="frame-cells">
+    <div class="cell span-7 v-bottom h-right tall bg-transparent">
+      <h1 class="big">There's a right way to do RIA marketing in an AI world.</h1>
+    </div>
+    <a href="consult.html" class="cell span-5 v-bottom bg-photo tall" style="--cell-photo: url('images/cell-intro.png');">
+      <p>A free 45-minute conversation about your firm and whether we're the right partner. You walk away with a clear read either way.</p>
+      <span class="cell-cta">Book a consultation</span>
+    </a>
+  </div>
+</section>
+
+<!-- PROMISE / PIVOT / FAILURE MODE (one block: big H2 left, two stacked body cells right) -->
+<section class="promise">
+  <div class="frame-cells" style="grid-template-rows: auto auto;">
+    <div class="cell v-bottom airy" style="grid-column: 1 / span 6; grid-row: 1 / span 2;">
+      <h2 class="big">AI lets you hire an entire marketing team at an absurdly low cost.</h2>
+    </div>
+    <div class="cell v-top airy" style="grid-column: 7 / span 6; grid-row: 1;">
+      <p><strong>But like any employees, they need management.</strong> Without a marketing leader owning the operation, no one is accountable for quality &mdash; and the output comes out generic, off-brand, and indistinguishable from every other RIA's. Most firms underestimate how much management AI actually needs.</p>
+    </div>
+    <div class="cell v-top airy" style="grid-column: 7 / span 6; grid-row: 2;">
+      <p><strong>Traditional agencies were meant to fill the marketing-leader gap.</strong> But unless an agency has rebuilt its entire business around AI, it can't compete on pace, quality, or cost. Most are still selling hours.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- PROPOSITION -->
+<section class="proposition">
+  <div class="frame-cells">
+    <div class="cell span-5 bg-blue v-bottom airy">
+      <h2 class="big">Silvy builds you a zero-headcount marketing org.</h2>
+      <p class="deck">Twelve AI agents handling production. Two senior operators handling judgment. Both founders, deep in financial services, on every account.</p>
+    </div>
+    <div class="cell span-7 bg-photo v-bottom tall" style="--cell-photo: url('images/hero-pricing.png');"></div>
+  </div>
+</section>
+
+
+<!-- AGENT INVENTORY (the 12 workflows the proposition just promised) -->
+<section class="inventory" id="agents">
+  <div class="frame-cells">
+    <div class="cell span-3"><h4 class="agent-name">Technical SEO</h4><p>Crawl, index, schema, page speed. Flagged weekly.</p></div>
+    <div class="cell span-3"><h4 class="agent-name">Keyword &amp; Content SEO</h4><p>Rankings, opportunity gaps, content briefs.</p></div>
+    <div class="cell span-3"><h4 class="agent-name">Local SEO</h4><p>Google Business, citations, regional rankings.</p></div>
+    <div class="cell span-3"><h4 class="agent-name">AI Search Visibility</h4><p>Get cited by ChatGPT, Perplexity, and Google AI Overviews.</p></div>
+    <div class="cell span-3"><h4 class="agent-name">Competitor Watch</h4><p>What RIAs in your niche publish, rank for, and post. Weekly digest with surfaced opportunities.</p></div>
+    <div class="cell span-3"><h4 class="agent-name">Compliance Pre-Check</h4><p>Pre-publish scan against your firm's rules. Catches issues before anything reaches your CCO.</p></div>
+    <div class="cell span-3"><h4 class="agent-name">Article Drafting</h4><p>Long-form drafts in your voice. Editor-reviewed.</p></div>
+    <div class="cell span-3"><h4 class="agent-name">Page Copy &amp; Lead Magnets</h4><p>Service pages, landing pages, downloadable assets.</p></div>
+    <div class="cell span-3"><h4 class="agent-name">Newsletter &amp; Sequences</h4><p>Curation, drafting, scheduling, drip flows, and segmentation.</p></div>
+    <div class="cell span-3"><h4 class="agent-name">LinkedIn Organic</h4><p>Post drafting, scheduling, engagement.</p></div>
+    <div class="cell span-3"><h4 class="agent-name">LinkedIn Paid</h4><p>Audience build, creative testing, optimization.</p></div>
+    <div class="cell span-3"><h4 class="agent-name">Performance &amp; Attribution</h4><p>One view of every channel. Marketing tied to AUM growth.</p></div>
+  </div>
+</section>
+
+
+<!-- PHASES -->
+<section class="phases" id="process">
+  <div class="frame-cells">
+    <div class="cell span-full bg-photo darken v-bottom h-right airy tall" style="--cell-photo: url('images/hero-process.png');">
+      <h2 class="big">Getting this right is a lot of work. After that it's almost no work.</h2>
+      <p class="deck">Maintenance runs month-to-month after the initial Foundation + Build phases.</p>
+    </div>
+  </div>
+  <div class="frame-cells">
+    <div class="cell span-2 v-top"><div class="phase-name">Consultation</div></div>
+    <div class="cell span-7 v-top"><h3 class="phase-title">See if there's a fit before anyone signs anything.</h3><p>You tell us about your firm, where your marketing stands today, and what you're trying to build. We tell you honestly whether Silvy is the right answer. If we're aligned, you'll get a scoped proposal within the week.</p></div>
+    <div class="cell span-3 h-right v-top free-cell"><div class="phase-price">Free<span>45 minutes</span></div></div>
+  </div>
+  <div class="frame-cells">
+    <div class="cell span-2 v-top"><div class="phase-name">Foundation</div></div>
+    <div class="cell span-7 v-top"><h3 class="phase-title">Fix the leaks before filling the bucket.</h3><p>Foundation is a deep diagnostic exam of your firm and digital presence: site, content, funnel, social, search visibility, and attribution. We surface what's broken, prioritize the fixes, and ship the urgent ones before any new agents go live. There's no point pouring more in if the basics are leaking.</p></div>
+    <div class="cell span-3 h-right v-top"><div class="phase-price">$10,000<span>4&ndash;6 weeks</span></div></div>
+  </div>
+  <div class="frame-cells">
+    <div class="cell span-2 v-top"><div class="phase-name">Build</div></div>
+    <div class="cell span-7 v-top"><h3 class="phase-title">Agents built around your firm.</h3><p>We design and build the agents Foundation called for, then run them. Outputs get reviewed and the system gets iterated until the quality is something you'd put your name on.</p></div>
+    <div class="cell span-3 h-right v-top"><div class="phase-price">$12,000<span>/ month &middot; 3&ndash;6 months</span></div></div>
+  </div>
+  <div class="frame-cells">
+    <div class="cell span-2 v-top"><div class="phase-name">Maintain</div></div>
+    <div class="cell span-7 v-top"><h3 class="phase-title">Keep the system running and improving over time.</h3><p>Monthly health checks and a quarterly business review tied to the outcomes we built for. Tooling updates whenever a meaningfully better model or integration ships. After the 6-month Build minimum, you decide each quarter whether to continue, hand off, or take it in-house with our help.</p></div>
+    <div class="cell span-3 h-right v-top"><div class="phase-price">$6,000<span>/ month &middot; ongoing</span></div></div>
+  </div>
+  <div class="frame-cells">
+    <div class="cell span-9 v-top airy">
+      <p><strong>Foundation and Build are the intensive phases.</strong> We're capturing your firm's positioning and constructing the system around it. By Maintain, the system is producing at a pace a 6-person team can't match, and the cost-per-output keeps dropping.</p>
+    </div>
+    <div class="cell span-3 h-right v-top airy">
+      <div class="phase-price">~$100K<span>year one, typical</span></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- COMPARE -->
+<section class="compare" id="compare">
+  <div class="frame-cells">
+    <div class="cell span-full v-bottom airy">
+      <h2 class="big">Cheaper than a senior hire. Higher-quality output than any alternative.</h2>
+      <p class="deck">Year-one cost, output capacity, compliance handling, time to first output, and what you own at the end.</p>
+    </div>
+  </div>
+  <div class="frame-cells">
+    <div class="cell span-full compare-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th class="silvy">Silvy</th>
+            <th>Traditional agency</th>
+            <th>In-house marketer</th>
+            <th>DIY w/ AI tools</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Year-one cost</th>
+            <td class="silvy">~$100K all in</td>
+            <td>$120&ndash;240K + media</td>
+            <td>$220&ndash;280K loaded</td>
+            <td class="muted">$5&ndash;20K in tools</td>
+          </tr>
+          <tr>
+            <th>Senior operator on the work</th>
+            <td class="silvy">Both founders, always</td>
+            <td class="muted">Sales contact, junior execution</td>
+            <td>One person, your hire</td>
+            <td class="muted">You</td>
+          </tr>
+          <tr>
+            <th>Output capacity</th>
+            <td class="silvy">12 agents running daily</td>
+            <td class="muted">Capped by team hours</td>
+            <td class="muted">Capped by one person's day</td>
+            <td class="muted">Capped by your day</td>
+          </tr>
+          <tr>
+            <th>Compliance posture</th>
+            <td class="silvy">Built into every workflow</td>
+            <td>Varies wildly</td>
+            <td>Depends on the hire</td>
+            <td class="muted">Your responsibility</td>
+          </tr>
+          <tr>
+            <th>What you own when it's over</th>
+            <td class="silvy">The full system + docs</td>
+            <td class="muted">Whatever's in the contract</td>
+            <td class="muted">The role + handoff risk</td>
+            <td>Whatever you built</td>
+          </tr>
+          <tr>
+            <th>Time to first output</th>
+            <td class="silvy">4&ndash;6 weeks</td>
+            <td>4&ndash;8 weeks</td>
+            <td class="muted">3&ndash;6 months (recruit + ramp)</td>
+            <td>Weeks of trial &amp; error</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+
+<!-- FIT -->
+<section class="fit" id="fit">
+  <div class="frame-cells">
+    <div class="cell span-full v-top h-right airy bg-transparent">
+      <h2 class="big">We work with a small number of firms.</h2>
+      <p class="deck">Established RIAs with a defined niche and a client base. The thing missing is senior marketing capacity, not strategy.</p>
+    </div>
+  </div>
+  <div class="frame-cells">
+    <div class="cell span-6 fit-cell fit-good">
+      <div class="fit-head">A great fit</div>
+      <ul>
+        <li>Established RIAs, typically $250M+ AUM, with a defined niche and a brand primed for growth</li>
+        <li>Knows AI tools are powerful but isn't sure how to apply them to marketing</li>
+        <li>Understands SEO and content are long-term investments, not short-term tactics</li>
+        <li>Has experimented with buying leads, was disappointed, and wants something more durable</li>
+        <li>Ready for a working partnership with direct access to senior operators</li>
+      </ul>
+    </div>
+    <div class="cell span-6 fit-cell fit-not">
+      <div class="fit-head">Not a fit</div>
+      <ul>
+        <li>Still defining their brand or market position</li>
+        <li>Believes an AI subscription is a substitute for marketing strategy</li>
+        <li>Expecting immediate results from marketing</li>
+        <li>Wants a hands-off vendor relationship</li>
+        <li>Early-stage with a lean marketing budget</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDERS -->
+<section class="founders" id="founders">
+  <div class="frame-cells">
+    <div class="cell span-full v-bottom airy">
+      <h2 class="big">You work directly with the two founders.</h2>
+      <p class="deck">No account managers, no handoffs. The people who built the system run your account.</p>
+    </div>
+  </div>
+  <div class="frame-cells">
+    <div class="cell span-full founder-photo-overlay" style="--founder-photo: url('images/founders.png');">
+      <div class="founder-overlay founder-overlay-left">
+        <div class="founder-name">Ben Fredrickson</div>
+        <p>10+ years across digital marketing, SEO, content, and paid.</p>
+      </div>
+      <div class="founder-overlay founder-overlay-right">
+        <div class="founder-name">Will Steiner</div>
+        <p>Former Head of Content at Altruist, owner of Stoneholt Wealth, co-founder of BuilderFP.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="frame-cells">
+    <div class="cell span-full h-center v-center airy tall faq-intro">
+      <h2 class="big">What advisors usually <em>ask first.</em></h2>
+      <p class="deck">If your question isn't here, bring it to the call.</p>
+    </div>
+  </div>
+  <div class="frame-cells">
+    <div class="cell span-full faq-cell">
+      <details class="faq-item">
+        <summary>How do you handle compliance?</summary>
+        <div class="faq-answer">
+          <p>Every workflow includes a compliance review step before anything publishes. We build your firm's compliance posture directly into the agent: disclaimers, prohibited language, citations, performance claim handling. Nothing ships without a human review against those rules.</p>
+          <p>For SEC-registered firms, we work with your CCO during Foundation to map the review chain. We are not a compliance vendor and don't replace your CCO.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>Can the agents sound like our firm?</summary>
+        <div class="faq-answer">
+          <p>That's the whole point of Foundation. We spend 4–6 weeks profiling your voice through 25 video questions, client call transcripts, and existing content before any agent writes a word for you. That profile becomes the source of truth every agent references.</p>
+          <p>A senior editor reviews drafts before they go out. Month one is heavy on calibration. By month two, your editor approves output in minutes.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>Why not just hire someone in-house?</summary>
+        <div class="faq-answer">
+          <p>You can. A senior marketer at an RIA runs $180–220K base plus benefits, so call it $250K+ loaded. They'll be capped by what one person can do in a day, take 3–6 months to recruit, and another 3–6 to ramp.</p>
+          <p>Silvy delivers the same capacity for ~$100K in year one. When the system is mature, hiring someone in-house to run it becomes a much easier conversation. We'll help you write the job description.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>Why not just buy ChatGPT Enterprise and do this ourselves?</summary>
+        <div class="faq-answer">
+          <p>You can, and we'd rather you do that than hire the wrong agency. But raw access to a model isn't the same as a system. The lift is in the workflows: how the model is prompted, what it has access to, how outputs are reviewed, where compliance fits, what gets measured.</p>
+          <p>Silvy is the operating layer on top of those tools. If you want to take it in-house and cancel us, you can. We document everything.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>Why is Maintain priced lower than Build?</summary>
+        <div class="faq-answer">
+          <p>Build is where the heavy lifting happens: designing the agents, writing the prompts, wiring the workflows, training them on your firm. By Maintain, that's done. Maintain is auditing, measuring, and rebuilding components when better tools ship.</p>
+          <p>If Maintain ever stops being worth $6K/mo, end it. The system is yours.</p>
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>Do you do paid Google Ads, podcasts, video, or events?</summary>
+        <div class="faq-answer">
+          <p>Not in scope. We do SEO, content, email, LinkedIn organic and paid, funnel/CRO, and reporting. If your strategy needs Google Ads or video production, we'll point you to people who do that well and stay in our lane.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+  <div class="frame-cells">
+    <div class="cell span-7 v-bottom h-right tall bg-transparent">
+      <h2 class="big">Interested to learn more?</h2>
+    </div>
+    <a href="consult.html" class="cell span-5 v-bottom bg-photo tall" style="--cell-photo: url('images/cell-cta.png');">
+      <p>A free 45-minute conversation. We learn about your firm, and if there's a fit you'll get a scoped proposal within the week.</p>
+      <span class="cell-cta">Book a consultation</span>
+    </a>
+  </div>
+</section>
+
+</div><!-- /site-frame -->
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="wordmark-sm">Silvy</div>
+        <p>An AI-based marketing system for established RIAs.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Talk to us</h4>
+        <a href="consult.html">Book a consultation</a>
+        <a href="mailto:hello@silvygrowth.com">hello@silvygrowth.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© Silvy 2026</span>
+      <span>AI-powered. Human-finished.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  const nav = document.getElementById('nav');
+  const hero = document.getElementById('hero');
+  const heroInner = document.querySelector('.hero-inner');
+  const wordmark = document.querySelector('.hero-wordmark');
+  const tagrow = document.querySelector('.hero-tagrow');
+
+  // On pages without a hero, nav is visible from the start
+  if (!hero) { nav.classList.add('visible'); }
+
+  let ticking = false;
+  function onScroll() {
+    if (!ticking) {
+      requestAnimationFrame(update);
+      ticking = true;
+    }
+  }
+  function update() {
+    const y = window.scrollY;
+    const h = window.innerHeight;
+    const p = Math.min(1, Math.max(0, y / h));
+
+    // Wordmark parallax — moves up faster than scroll, scales down, fades out
+    if (wordmark) {
+      const translate = -y * 0.45;
+      const scale = 1 - p * 0.12;
+      const opacity = 1 - Math.pow(p, 1.4);
+      wordmark.style.transform = `translate3d(0, ${translate}px, 0) scale(${scale})`;
+      wordmark.style.opacity = opacity.toFixed(3);
+      wordmark.style.transformOrigin = 'left top';
+    }
+    if (tagrow) {
+      const translateTag = -y * 0.25;
+      const opacityTag = 1 - Math.pow(p, 0.9) * 1.4;
+      tagrow.style.transform = `translate3d(0, ${translateTag}px, 0)`;
+      tagrow.style.opacity = Math.max(0, opacityTag).toFixed(3);
+    }
+
+    // Nav appears once you've scrolled past ~70% of the hero (only relevant when hero exists)
+    if (hero) {
+      nav.classList.toggle('visible', y > h * 0.7);
+    }
+
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
+  update();
+})();
+
+/* Logo click — instant jump (no smooth scroll) when target is in-page */
+(function() {
+  const logo = document.querySelector('.nav-cell-logo');
+  if (!logo) return;
+  logo.addEventListener('click', function(e) {
+    const href = logo.getAttribute('href');
+    if (!href || !href.startsWith('#')) return;
+    e.preventDefault();
+    const target = document.querySelector(href);
+    // Temporarily disable CSS smooth scroll, jump, then restore
+    const html = document.documentElement;
+    const prev = html.style.scrollBehavior;
+    html.style.scrollBehavior = 'auto';
+    if (target) {
+      const y = target.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo(0, y);
+    } else {
+      window.scrollTo(0, 0);
+    }
+    requestAnimationFrame(() => { html.style.scrollBehavior = prev; });
+  });
+})();
+
+/* Photo hero — darkens overlay as user scrolls past it */
+(function() {
+  const heroCell = document.querySelector('.page-header.has-photo .cell');
+  if (!heroCell) return;
+  let pTick = false;
+  function updateHeroDarken() {
+    const r = heroCell.getBoundingClientRect();
+    const h = window.innerHeight;
+    // 0 when hero top is at viewport top; 1 when hero fully scrolled past
+    const heroH = Math.max(r.height, 1);
+    const scrolled = Math.max(0, -r.top);
+    const p = Math.min(1, scrolled / heroH);
+    heroCell.style.setProperty('--hero-darken', p.toFixed(3));
+    pTick = false;
+  }
+  window.addEventListener('scroll', () => {
+    if (!pTick) { requestAnimationFrame(updateHeroDarken); pTick = true; }
+  }, { passive: true });
+  updateHeroDarken();
+})();
+
+/* Scroll-driven gradient — interpolates bloom positions across keyframes */
+(function() {
+  const body = document.body;
+  const keyframes = [
+    { g1: [100, 95, 0.70], g2: [0, 25, 0.50] },
+    { g1: [80, 30, 0.55],  g2: [10, 90, 0.60] },
+    { g1: [10, 70, 0.65],  g2: [100, 20, 0.55] },
+  ];
+  function lerp(a, b, t) { return a + (b - a) * t; }
+  function setVars(k) {
+    body.style.setProperty('--g1-x', k.g1[0] + '%');
+    body.style.setProperty('--g1-y', k.g1[1] + '%');
+    body.style.setProperty('--g1-i', k.g1[2]);
+    body.style.setProperty('--g2-x', k.g2[0] + '%');
+    body.style.setProperty('--g2-y', k.g2[1] + '%');
+    body.style.setProperty('--g2-i', k.g2[2]);
+  }
+  function interp(p) {
+    const n = keyframes.length - 1;
+    const seg = Math.min(Math.floor(p * n), n - 1);
+    const t = (p * n) - seg;
+    const a = keyframes[seg], b = keyframes[seg + 1];
+    return {
+      g1: a.g1.map((v, i) => lerp(v, b.g1[i], t)),
+      g2: a.g2.map((v, i) => lerp(v, b.g2[i], t)),
+    };
+  }
+  let gTick = false;
+  function updateGradient() {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    const p = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+    setVars(interp(p));
+    gTick = false;
+  }
+  window.addEventListener('scroll', () => {
+    if (!gTick) { requestAnimationFrame(updateGradient); gTick = true; }
+  }, { passive: true });
+  window.addEventListener('resize', () => requestAnimationFrame(updateGradient), { passive: true });
+  updateGradient();
+})();
+
+</script>
+
+</body>
+</html>

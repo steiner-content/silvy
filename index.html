@@ -341,7 +341,8 @@ a.cell.bg-ink:hover::after { transform: translateX(4px); }
   line-height: 0.95;
   max-width: 14ch;
 }
-.cell.bg-ink .big { color: var(--white); }
+.cell.bg-ink .big,
+.cell.bg-green .big { color: var(--white); }
 .cell .big em { font-style: normal; color: inherit; }
 
 .cell .deck {
@@ -355,6 +356,7 @@ a.cell.bg-ink:hover::after { transform: translateX(4px); }
   text-wrap: pretty;
 }
 .cell.bg-ink .deck { color: rgba(255,255,255,0.78); }
+.cell.bg-green .deck { color: rgba(255,255,255,0.88); }
 
 .cell > p {
   font-family: var(--body);
@@ -1668,7 +1670,7 @@ footer .container { padding: 0 clamp(3rem, 6vw, 5rem); }
   <div class="nav-row">
     <a href="#intro" class="nav-cell nav-cell-logo"><span class="nav-logo">Silvy</span></a>
     <div class="nav-cell nav-cell-spacer"></div>
-        <a href="consult.html" class="nav-cell nav-cell-cta">Book a consultation</a>
+        <a href="/consult" class="nav-cell nav-cell-cta">Book a consultation</a>
   </div>
 </nav>
 
@@ -1692,7 +1694,7 @@ footer .container { padding: 0 clamp(3rem, 6vw, 5rem); }
     <div class="cell span-7 v-bottom h-right tall bg-transparent">
       <h1 class="big">There's a right way to do RIA marketing in an AI world.</h1>
     </div>
-    <a href="consult.html" class="cell span-5 v-bottom bg-photo tall" style="--cell-photo: url('images/cell-intro.png');">
+    <a href="/consult" class="cell span-5 v-bottom bg-photo tall" style="--cell-photo: url('images/cell-intro.png');">
       <p>A free 45-minute conversation about your firm and whether we're the right partner. You walk away with a clear read either way.</p>
       <span class="cell-cta">Book a consultation</span>
     </a>
@@ -1970,7 +1972,7 @@ footer .container { padding: 0 clamp(3rem, 6vw, 5rem); }
     <div class="cell span-7 v-bottom h-right tall bg-transparent">
       <h2 class="big">Interested to learn more?</h2>
     </div>
-    <a href="consult.html" class="cell span-5 v-bottom bg-photo tall" style="--cell-photo: url('images/cell-cta.png');">
+    <a href="/consult" class="cell span-5 v-bottom bg-photo tall" style="--cell-photo: url('images/cell-cta.png');">
       <p>A free 45-minute conversation. We learn about your firm, and if there's a fit you'll get a scoped proposal within the week.</p>
       <span class="cell-cta">Book a consultation</span>
     </a>
@@ -1989,8 +1991,13 @@ footer .container { padding: 0 clamp(3rem, 6vw, 5rem); }
       </div>
       <div class="footer-col">
         <h4>Talk to us</h4>
-        <a href="consult.html">Book a consultation</a>
-        <a href="mailto:hello@silvygrowth.com">hello@silvygrowth.com</a>
+        <a href="/consult">Book a consultation</a>
+        <a href="mailto:ben@silvygrowth.com">ben@silvygrowth.com</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Use</a>
       </div>
     </div>
     <div class="footer-bottom">

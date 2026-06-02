@@ -5,7 +5,15 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://silvygrowth.com/consult.html</loc>
+    <loc>https://silvygrowth.com/consult</loc>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://silvygrowth.com/privacy</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://silvygrowth.com/terms</loc>
+    <priority>0.3</priority>
   </url>
 </urlset>

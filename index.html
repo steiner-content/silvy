@@ -536,30 +536,33 @@ a.cell:hover .cell-cta { border-color: var(--white); }
 /* Mobile: stack the bios — Ben at the top of the photo, Will at the bottom —
    each full-width, with a scrim at both ends */
 @media (max-width: 800px) {
+  /* On mobile, take the text OFF the photo: show the founders uncovered as a clean
+     block, then put the bios in a dark band below it. */
   .founder-photo-overlay {
     height: auto;
-    /* Wider crop than portrait so the landscape photo keeps both founders in frame
-       (a tall 3/4 crop only showed the center ~40% of the width and cut off Ben). */
-    aspect-ratio: 4 / 3;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    aspect-ratio: auto;
+    display: block;
+    background: var(--ink);
   }
   .founder-photo-overlay::before {
-    background: linear-gradient(
-      to top,
-      rgba(0,0,0,0.84) 0%, rgba(0,0,0,0.45) 30%, rgba(0,0,0,0) 56%
-    );
+    content: "";
+    position: static;
+    display: block;
+    width: 100%;
+    /* 16:9-ish landscape crop keeps both founders fully in frame, nothing over them */
+    aspect-ratio: 3 / 2;
+    background: var(--founder-photo) center / cover no-repeat;
   }
-  /* Stack both bios at the bottom so the faces stay clear */
   .founder-overlay {
     position: static;
     width: 100%;
     max-width: none;
     text-align: left;
+    color: var(--white);
+    padding: 1.3rem clamp(1.5rem, 5vw, 2.4rem);
   }
   .founder-overlay-left  { padding-bottom: 0.4rem; }
-  .founder-overlay-right { padding-top: 0.4rem; }
+  .founder-overlay-right { padding-top: 1.3rem; border-top: 1px solid rgba(255,255,255,0.14); }
 }
 
 /* Fit cells — great fit / not a fit */

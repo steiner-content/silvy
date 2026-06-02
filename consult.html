@@ -3,18 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Silvy — Marketing agents for RIAs</title>
-<meta name="description" content="Silvy builds and manages AI marketing agents for established RIAs. Two senior operators, twelve agents. The output of a 10-person team at the cost of a mid-level hire.">
+<title>Book a consultation — Silvy</title>
+<meta name="description" content="Book a free 45-minute consultation with both Silvy founders. We learn about your RIA, and if there's a fit you'll get a scoped proposal within the week.">
 <meta name="theme-color" content="#00C260">
 
+<link rel="canonical" href="https://silvygrowth.com/consult.html">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Silvy — Marketing agents for RIAs">
-<meta property="og:description" content="Two senior operators managing twelve marketing agents for established RIAs. AI-native infrastructure, built around your firm.">
+<meta property="og:url" content="https://silvygrowth.com/consult.html">
+<meta property="og:title" content="Book a consultation — Silvy">
+<meta property="og:description" content="A free 45-minute conversation with both founders. Designed to be useful whether or not we end up working together.">
 <meta property="og:site_name" content="Silvy">
+<meta property="og:image" content="https://silvygrowth.com/images/founders.png">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Silvy — Marketing agents for RIAs">
-<meta name="twitter:description" content="Two senior operators managing twelve marketing agents for established RIAs.">
+<meta name="twitter:title" content="Book a consultation — Silvy">
+<meta name="twitter:description" content="A free 45-minute conversation with both founders.">
+<meta name="twitter:image" content="https://silvygrowth.com/images/founders.png">
 
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='50' fill='%2300C260'/><rect y='50' width='100' height='50' fill='%230A0A0A'/><g transform='translate(16.1 85.5) scale(0.1 -0.1)' fill='white'><path d='M392 -13C531 -13 623 71 623 204C623 317 550 386 436 417L291 457C232 473 199 502 200 555C201 602 239 631 293 631C389 631 458 572 519 467H595V710H519L508 635H491C450 688 382 723 290 723C149 723 55 637 55 507C55 388 138 326 234 300L378 261C448 242 479 208 478 158C477 112 442 78 385 78C289 78 198 137 125 264H55V0H130L141 85H158C215 24 294 -13 392 -13Z'/></g></svg>">
 
@@ -29,7 +33,7 @@
   "@type": "ProfessionalService",
   "name": "Silvy",
   "description": "Builds and manages AI marketing agents for established RIAs.",
-  "url": "https://silvy.co/",
+  "url": "https://silvygrowth.com/",
   "areaServed": "United States",
   "priceRange": "$$$",
   "serviceType": "AI marketing agents for RIAs"
@@ -54,9 +58,8 @@
   --ink-2: #1F1F1F;
   --ink-3: #4F4F4F;
   --rule: #D6D6D6;
-  /* Accent — electric green. (`--blue` is a legacy name for the same accent.) */
-  --blue: #00C260;
-  --green: var(--blue);
+  /* Accent — electric green */
+  --green: #00C260;
   /* Type */
   --wordmark: 'Stringer', 'Times New Roman', serif;
   --display: 'Geist', 'Inter', 'Helvetica Neue', system-ui, sans-serif;
@@ -91,7 +94,7 @@ body {
   position: relative;
 }
 
-/* Fixed gradient atmosphere — two large blue blooms that shift on scroll */
+/* Fixed gradient atmosphere — two large green blooms that shift on scroll */
 body {
   --g1-x: 100%; --g1-y: 95%; --g1-i: 0.7;
   --g2-x: 0%;   --g2-y: 25%; --g2-i: 0.5;
@@ -132,7 +135,7 @@ body::after {
 
 body > * { position: relative; z-index: 1; }
 
-::selection { background: var(--blue); color: var(--white); }
+::selection { background: var(--green); color: var(--white); }
 
 a { color: inherit; text-decoration: none; }
 
@@ -203,7 +206,6 @@ a { color: inherit; text-decoration: none; }
 /* Backgrounds */
 .cell.bg-paper { background: var(--paper-2); }
 .cell.bg-ink   { background: var(--ink); color: var(--white); }
-.cell.bg-blue  { background: var(--blue); color: var(--white); }
 .cell.bg-green { background: var(--green); color: var(--white); }
 .cell.bg-transparent { background: transparent; }
 .cell.bg-gradient {
@@ -280,19 +282,13 @@ a.cell.bg-photo:hover .cell-cta {
 
 /* When two saturated cells sit side-by-side, divider needs to contrast */
 .cell.bg-ink:has(+ .cell.bg-ink) { border-right-color: rgba(255,255,255,0.22); }
-.cell.bg-blue:has(+ .cell.bg-blue) { border-right-color: rgba(255,255,255,0.22); }
 .cell.bg-green:has(+ .cell.bg-green) { border-right-color: rgba(255,255,255,0.22); }
 
-/* Inherit text color for blue/green-bg cells */
-.cell.bg-blue .big,    .cell.bg-green .big,
-.cell.bg-blue .deck,   .cell.bg-green .deck,
-.cell.bg-blue > p,     .cell.bg-green > p,
-/* Green cells: all text is white, period. */
-.cell.bg-blue, .cell.bg-blue *,
+/* Green-bg cells: all text is white, period. */
 .cell.bg-green, .cell.bg-green *,
 .cell.free-cell, .cell.free-cell * { color: var(--white); }
 
-.cell.bg-blue .value {
+.cell.bg-green .value {
   font-size: var(--t-2xl);
   line-height: 1;
   letter-spacing: -0.03em;
@@ -464,9 +460,9 @@ a.cell:hover .cell-cta { border-color: var(--white); }
   margin-top: 0.5rem;
   letter-spacing: 0;
 }
-/* Free cell — blue background + white text on desktop, blue text on white on mobile */
+/* Free cell — green background + white text on desktop, green text on white on mobile */
 .cell.free-cell {
-  background: var(--blue);
+  background: var(--green);
 }
 .cell.free-cell .phase-price,
 .cell.free-cell .phase-price span { color: var(--white); }
@@ -475,7 +471,7 @@ a.cell:hover .cell-cta { border-color: var(--white); }
 @media (max-width: 800px) {
   .cell.free-cell { background: var(--white); }
   .cell.free-cell .phase-price,
-  .cell.free-cell .phase-price span { color: var(--blue); }
+  .cell.free-cell .phase-price span { color: var(--green); }
 }
 
 /* Outcomes from/to lines */
@@ -594,7 +590,7 @@ a.cell:hover .cell-cta { border-color: var(--white); }
   padding-bottom: 1.4rem;
   border-bottom: 1px solid var(--ink);
 }
-.cell.bg-blue .expect-title { color: var(--white); border-bottom-color: rgba(255,255,255,0.4); }
+.cell.bg-green .expect-title { color: var(--white); border-bottom-color: rgba(255,255,255,0.4); }
 .cell .expect-list { list-style: none; padding: 0; margin: 0; }
 .cell .expect-list li {
   font-family: var(--body);
@@ -606,7 +602,7 @@ a.cell:hover .cell-cta { border-color: var(--white); }
 }
 .cell .expect-list li:first-child { border-top: none; padding-top: 0; }
 .cell .expect-list li:last-child { padding-bottom: 0; }
-.cell.bg-blue .expect-list li { color: rgba(255,255,255,0.88); border-top-color: rgba(255,255,255,0.18); }
+.cell.bg-green .expect-list li { color: rgba(255,255,255,0.88); border-top-color: rgba(255,255,255,0.18); }
 
 /* CONSULT PAGE — headline/photo beside the form so the form is visible immediately */
 .consult-hero-copy {
@@ -833,8 +829,8 @@ nav.visible { transform: translateY(0); }
   transition: background 0.2s, color 0.2s;
 }
 .nav-cell + .nav-cell { border-left: 1px solid var(--ink); }
-.nav-cell:hover { background: var(--blue); color: var(--white); }
-.nav-cell-active { background: var(--blue); color: var(--white); }
+.nav-cell:hover { background: var(--green); color: var(--white); }
+.nav-cell-active { background: var(--green); color: var(--white); }
 .nav-cell-spacer { padding: 0; }
 .nav-cell-spacer:hover { background: transparent; }
 
@@ -863,7 +859,7 @@ nav.visible { transform: translateY(0); }
   background: var(--ink);
   padding: 0.85rem 1.8rem;
 }
-.nav-cell-cta:hover { background: var(--blue); color: var(--white); }
+.nav-cell-cta:hover { background: var(--green); color: var(--white); }
 
 @media (max-width: 768px) {
   .nav-link { display: none; }
@@ -1238,7 +1234,7 @@ nav.visible { transform: translateY(0); }
 
 /* ===== STAT BAND ===== */
 .stat-band {
-  background: var(--blue);
+  background: var(--green);
   color: var(--white);
   padding: clamp(3rem, 5vw, 4rem) 0 clamp(5rem, 9vw, 7rem);
   border-top: 1px solid rgba(255,255,255,0.15);
@@ -1944,7 +1940,7 @@ footer .container { padding: 0 clamp(3rem, 6vw, 5rem); }
         <li>Anything that's been on your mind about fit</li>
       </ul>
     </div>
-    <div class="cell span-4 bg-blue">
+    <div class="cell span-4 bg-green">
       <div class="expect-title">What you walk away with</div>
       <ul class="expect-list">
         <li>An honest read on whether Silvy is the right answer for your firm</li>
